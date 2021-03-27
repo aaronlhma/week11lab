@@ -3,7 +3,7 @@ Description="a weather service"
 
 [Service]
 Type=simple
-ExecStart=/home/vagrant/bin/p1script
+ExecStart=/home/vagrant/bin/weather_update
 WorkingDirectory=/home/vagrant
 Restart=on-failure
 
