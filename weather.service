@@ -1,0 +1,11 @@
+[Unit]
+Description="a weather service"
+
+[Service]
+Type=simple
+ExecStart=/home/vagrant/bin/p1script
+WorkingDirectory=/home/vagrant
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

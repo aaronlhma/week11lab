@@ -1,0 +1,9 @@
+[Unit]
+Description="Runs the weather.service every hour"
+
+[Timer]
+Unit=weather.service
+OnUnitInactiveSec=1h
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,16 @@
+#!/bin/bash
+# prints the wttr.in script into a weather.txt file 
+#
+
+#path to write the output to
+WTTR_PATH=/home/vagrant/weather
+LOC="Burnaby"
+
+if !([[ -f $WTTR_PATH ]]); then
+	#doesn't exist create the weather text file
+	echo "creating $WTTR_PATH"
+	touch $WTTR_PATH
+fi
+
+curl -s wttr.in/$LOC?format="%l:+%c+%C+%t\n" > $WTTR_PATH
+echo "$(date)" >> $WTTR_PATH
